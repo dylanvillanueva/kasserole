@@ -1,3 +1,21 @@
+// Hamburger Menu
+const mainMenu = document.querySelector(".main-menu");
+const closeMenu = document.querySelector(".close-menu");
+const openMenu = document.querySelector(".open-menu");
+
+openMenu.addEventListener("click", show);
+closeMenu.addEventListener("click", close);
+
+function show() {
+    mainMenu.style.display = "flex";
+    mainMenu.style.top = "0";
+}
+
+function close() {
+    mainMenu.style.top = "-100%"
+}
+
+// Upcoming Gigs
 const cities = ["New York City, NY", "Los Angeles, CA", "Chicago, IL",
     "Houston, TX", "Phoenix, AZ", "Philadelphia, PA", "San Antonio, TX",
     "San Diego, CA", "Dallas, TX", "San Jose, CA"];
@@ -11,7 +29,7 @@ function addRandomGig(numOfGigs) {
     let month = 0;
     const year = 2023;
     for (let i = 0; i < numOfGigs; i++) {
-        selectedMonth = months[month];
+        const selectedMonth = months[month];
         const day = Math.floor(Math.random() * 28) + 1;
         const randomCity = Math.floor(Math.random() * cities.length);
         const city = cities.splice(randomCity, 1);
@@ -24,8 +42,3 @@ function addRandomGig(numOfGigs) {
 }
 
 addRandomGig(10);
-
-constSongDemo = document.querySelector("#song-demo");
-constSongDemo.addEventListener("click", function (e) {
-    e.target.innerText = "HA! GOT EEM!";
-})

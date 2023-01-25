@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=New+Rocker&display=swap');
 
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: "Montserrat", sans-serif;
     text-align: center;
     max-width: 1000px;
@@ -11,10 +16,78 @@ body {
     background-color: black;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
+h1 {
+    font-family: "New Rocker", cursive;
 }
+
+h2 {
+    text-decoration: underline;
+    color: salmon;
+    font-size: 3rem;
+}
+
+p {
+    width: 75%;
+    margin: auto;
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: salmon;
+}
+
+/* Navbar */
+
+nav {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .main-menu {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav .main-menu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+nav .main-menu li a:hover {
+    background-color: salmon;
+}
+
+nav .open-menu {
+    font-size: 2rem;
+    margin: 16px 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .main-menu .close-menu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Main */
 
 main {
     margin: 50px auto 50px auto;
@@ -22,53 +95,7 @@ main {
     flex-direction: column;
 }
 
-section {
-    margin: 30px auto 0;
-}
-
-section li {
-    line-height: 2;
-}
-
-h2 {
-    text-decoration: underline;
-    color: salmon;
-}
-
-h1 {
-    font-family: "New Rocker", cursive;
-    font-size: 3rem;
-    margin: 25px auto 0 25px;
-}
-
-p {
-    width: 75%;
-    margin: auto;
-    line-height: 1.5;
-}
-
-ul {
-    list-style: none;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    margin: 60px 25px 0 auto;
-}
-
-.nav-item {
-    padding: 0 25px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+/* Image */
 
 .banner-div {
     height: 300px;
@@ -81,32 +108,65 @@ a:hover {
     transform: translateX(-50%);
 }
 
+/* Sections */
+
+section {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.about-us-description, section ul {
+    margin-top: 20px;
+}
+
+section li {
+    list-style: none;
+    line-height: 2;
+    font-size: 1.5rem;
+}
+
 .song-list {
     text-align: left;
 }
 
-@media only screen and (max-width: 800px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
+/* Footer */
 
-    h1 {
-        margin: 25px auto 0;
-    }
-
-    nav ul {
-        margin: 30px auto 0;
-    }
-
+.copyright {
+    font-size: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
-    nav ul {
+/* Media Queries */
+
+@media (max-width: 800px) {
+    nav .main-menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        transition: top 1s ease;
+        display: none;
     }
 
-    .nav-item {
-        padding: 10px 0;
+    nav .main-menu .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .open-menu {
+        display: block;
+    }
+
+    nav .main-menu li a:hover {
+        background-color: none;
+        color: salmon;
+        font-size: 1.6rem;
     }
 }

@@ -7,18 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kasserole, the Band</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/43124feaf5.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>KASSEROLE</h1>
         <nav>
-            <ul>
+            <div class="logo"><h1>KASSEROLE</h1></div>
+            <div class="open-menu"><i class="fa fa-bars"></i></div>
+            <ul class="main-menu">
                 <li class="nav-item"><a href="#upcoming-gigs">Book a Gig</a></li>
                 <li class="nav-item"><a href="#about-us">About Us</a></li>
-                <li id="song-demo" class="nav-item"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        target="_blank">Song Demo</a></li>
+                <li class="nav-item"><a href="#">Song Demo</a></li>
+                <div class="close-menu"><i class="fa fa-times"></i></div>
             </ul>
         </nav>
     </header>
@@ -28,7 +30,7 @@
         </div>
         <section>
             <h2 id="about-us">WHO WE ARE</h2>
-            <p>Kasserole is a popular area metal band with a sound reminescent of some of the 80s greats. Critics dub
+            <p class="about-us-description">Kasserole is a popular area metal band with a sound reminescent of some of the 80s greats. Critics dub
                 Kasserole "the Metallica of modern times."</p>
         </section>
         <section>
