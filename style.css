@@ -27,7 +27,6 @@ h2 {
 }
 
 p {
-    width: 75%;
     margin: auto;
     line-height: 1.5;
     font-size: 1.5rem;
@@ -99,13 +98,16 @@ main {
 
 .banner-div {
     height: 300px;
+    max-width: 100%;
 }
 
 .banner {
     height: 300px;
+    max-width: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    object-fit: cover;
 }
 
 /* Sections */
@@ -115,7 +117,8 @@ section {
     margin: 0 auto;
 }
 
-.about-us-description, section ul {
+.about-us-description,
+section ul {
     margin-top: 20px;
 }
 
